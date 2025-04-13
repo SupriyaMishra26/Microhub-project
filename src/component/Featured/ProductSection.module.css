@@ -1,0 +1,108 @@
+.section {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+.sliderContainer {
+  position: relative;
+  padding: 0 40px;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.swiper {
+  padding: 20px 0;
+}
+
+.swiperButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #e4e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  color: #767676;
+}
+
+.swiperButton:hover {
+  background: #f8f9fa;
+  color: #333;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.swiperButtonPrev {
+  left: 0;
+}
+
+.swiperButtonNext {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .sliderContainer {
+    padding: 0 30px;
+  }
+
+  .swiperButton {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sliderContainer {
+    padding: 0 25px;
+  }
+
+  .swiperButton {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper {
+    padding: 15px 0;
+  }
+}

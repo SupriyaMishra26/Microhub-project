@@ -1,0 +1,241 @@
+.wrapper {
+  padding: 2rem 0;
+  background: #fff;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 4rem 0;
+  background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: translateY(-5px);
+}
+
+.box h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.box p {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.bgBG {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.gridItem {
+  padding: 2rem;
+  position: relative;
+}
+
+.gridItem h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.gridItem p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcons div {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.socialIcons div:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.withBefore {
+  position: relative;
+}
+
+.withBefore::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 10%;
+  height: 80%;
+  width: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.gridItem h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.3;
+}
+
+.gridItem h4 p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.gridItem h4 span {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.inputEmail {
+  display: flex;
+  gap: 1rem;
+  max-width: 450px;
+  width: 100%;
+}
+
+.inputEmail input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.inputEmail input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.inputEmail button {
+  padding: 1rem 2rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.inputEmail button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(37, 99, 235, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .icons {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+
+  .gridItem h1 {
+    font-size: 2rem;
+  }
+
+  .gridItem h4 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .withBefore::before {
+    left: 10%;
+    top: 0;
+    width: 80%;
+    height: 2px;
+  }
+
+  .gridItem {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .inputEmail {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .icons {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .icon {
+    padding: 0.5rem;
+  }
+
+  .gridItem h1 {
+    font-size: 1.75rem;
+  }
+
+  .gridItem h4 {
+    font-size: 1.5rem;
+  }
+
+  .inputEmail {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .inputEmail button {
+    width: 100%;
+    padding: 0.875rem;
+  }
+}
